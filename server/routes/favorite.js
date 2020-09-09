@@ -4,8 +4,8 @@ const { Favorite } = require('../models/Favorite');
 
 
 
-router.post('/favoriteNumber', (req, res) => {
-
+router.post('/api/favorite/favoriteNumber', (req, res) => {
+    
     // mongoDB에서 favorite num 가져오기
     Favorite.find({ "movieId": req.body.movieId})
         .exec((err, info) => {
